@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "textstats"
+version = "1.0.0"
+description = "Plain-English text analysis and classic readability scores, offline and deterministic."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["text", "analysis", "readability", "flesch", "smog", "cli"]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+textstats = "textstats.cli:main"
+
+[tool.setuptools]
+packages = ["textstats"]
